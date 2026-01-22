@@ -11,11 +11,9 @@ fn start_server() -> Child {
 
     Command::new("java")
         .args([
-            "-Xms4G",
-            "-Xmx8G",
-            "-XX:+UseG1GC",
+            "-Xmx1024M",
             "-jar",
-            "fabric-server-launch.jar",
+            "server.jar",
             "nogui",
         ])
         .spawn()
